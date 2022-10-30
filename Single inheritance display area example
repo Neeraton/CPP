@@ -1,0 +1,30 @@
+#include<iostream>
+using namespace std;
+class A
+{
+public:
+    float a,b,c;
+    void ip()
+    {
+        cout<<"enter the length,breadth and redius respectively:";
+        cin>>a>>b>>c;
+    }
+};
+class B :public A
+{
+public:
+    void show()
+    {
+    cout<<"\n\nArea of the square is ="<<a*a;
+    cout<<"\n\nArea of the rectangle is ="<<a*b;
+    cout<<"\n\nArea of the circle is ="<<3.14*c*c;
+    }
+};
+int main()
+{
+    B b;
+    b.ip();
+    b.show();
+    return 0;
+}
+
