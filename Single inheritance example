@@ -1,0 +1,28 @@
+#include<iostream>
+using namespace std;
+class A
+{
+public:
+    float a;
+    void ip()
+    {
+        cout<<"\nenter the number :";
+        cin>>a;
+    }
+};
+class B:public A
+{
+public:
+        void show()
+    {
+        cout<<"\nthe cube of the number is ="<<a*a*a<<endl;
+    }
+
+};
+int main()
+{
+    B c;
+    c.ip();
+    c.show();
+    return 0;
+}
