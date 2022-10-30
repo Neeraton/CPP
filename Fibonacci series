@@ -1,0 +1,23 @@
+#include<iostream>
+using namespace std;
+class fib
+{
+    public:
+    int i=1,n,a=0,b=1,c;
+};
+int main()
+{
+    fib f;
+    cout<<"enter the number:";
+    cin>>f.n;
+    cout<<"\nfibonacci series:\n";
+    while(f.i<=f.n)
+    {
+        cout<<"\n\t\t"<<f.a;
+        f.c=f.a+f.b;
+        f.a=f.b;
+        f.b=f.c;
+        f.i++;
+    }
+    return 0;
+}
