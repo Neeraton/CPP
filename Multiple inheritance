@@ -1,0 +1,40 @@
+#include<iostream>
+using namespace std;
+class A
+{
+public:
+    float a;
+    void ip()
+    {
+        cout<<"enter the first number"<<endl;
+        cin>>a;
+    }
+};
+class B
+{
+public:
+    float b;
+    void ip1()
+    {
+        cout<<"\nenter the second number"<<endl;
+        cin>>b;
+    }
+};
+class C :public A,public B
+{
+public:
+    void sum()
+    {
+        cout<<"\nFirst number is = "<<a;
+        cout<<"\nSecond number is = "<<b;
+        cout<<"\nSum = "<<a+b;
+    }
+};
+int main()
+{
+    C x;
+    x.ip();
+    x.ip1();
+    x.sum();
+    return 0;
+}
