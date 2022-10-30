@@ -1,0 +1,100 @@
+#include<iostream>
+using namespace std;
+class Fraction
+{
+     public:
+          int nr,dr;
+     public:
+          Fraction()
+          {
+               nr = 1;
+               dr = 1;
+          }
+          Fraction(int n, int d)
+          {
+               nr = n;
+               if (d==0)
+               {
+                    cout << "\n\nundefined\n(denominator should not =0)" << endl;
+                    exit(0);
+               }
+               else
+                    dr = d;
+          }
+          Fraction operator +(Fraction f)
+          {
+               int n = nr*f.dr+f.nr*dr;
+               int d = dr*f.dr;
+               return Fraction(n/gcd(n,d),d/gcd(n,d));
+          }
+          Fraction operator -(Fraction f)
+          {
+               int n = nr*f.dr-f.nr*dr;
+               int d = dr*f.dr;
+               return Fraction(n/gcd(n,d),d/gcd(n,d));
+          }
+          Fraction operator *(Fraction f)
+          {
+               int n = nr*f.nr;
+               int d = dr*f.dr;
+               return Fraction(n/gcd(n,d),d/gcd(n,d));
+          }
+          Fraction operator /(Fraction f)
+          {
+               int n = nr*f.dr;
+               int d = dr*f.nr;
+               return Fraction(n/gcd(n,d),d/gcd(n,d));
+          }
+          bool operator == (Fraction &f)
+          {
+               return (nr==f.nr) && (dr==f.dr);
+          }
+          int gcd(int n, int d)
+          {
+               int rem;
+               while (d != 0)
+               {
+                    rem = n % d;
+                    n = d;
+                    d = rem;
+               }
+               return n;
+          }
+          void accept()
+          {
+               cout<<"\n Enter Numerator     :  ";
+               cin>>nr;
+               cout<<"\n Enter Denominator   :  ";
+               cin>>dr;
+          }
+};
+int main()
+{
+     Fraction f1;
+     Fraction f2;
+     Fraction f3;
+
+     cout<<"\n Enter 1st Fraction Value \n";
+     f1.accept();
+
+     cout<<"\n\n Enter 2nd Fraction Value \n";
+     f2.accept();
+
+     f3=f1+f2;
+     cout<<"\n\n Sum of Two Numbers : "<<f3.nr<<"/"<<f3.dr<<endl;
+
+     f3=f1-f2;
+     cout<<"\n Difference of Two Numbers : "<<f3.nr<<"/"<<f3.dr<<endl;
+
+     f3=f1*f2;
+     cout<<"\n Product of Two Numbers : "<<f3.nr<<"/"<<f3.dr<<endl;
+
+     f3=f1/f2;
+     cout<<"\n Division of Two Numbers : "<<f3.nr<<"/"<<f3.dr;
+
+     if(f1 == f2)
+          cout<<"\n\n\n Fraction 1 is Equal to Fraction 2"<<endl;
+     else
+          cout<<"\n\n\n Fraction 1 is Not Equal to Fraction 2"<<endl;
+     return 0;
+}
