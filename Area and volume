@@ -1,0 +1,42 @@
+#include<iostream>
+using namespace std;
+const float pi= 3.14;
+double l,b,h;
+float r;
+double area(double l)
+{
+    return l*l;
+}
+double area(double l,double b )
+{
+    return l*b;
+}
+double area(double l,double b,double h)
+{
+    return l*b*h;
+}
+float area(float r)
+{
+    return pi*r*r;
+}
+
+int main()
+{
+    cout<<"\nEnter the length of square:";
+    cin>>l;
+    cout<<"\nArea of square="<<area(l);
+
+    cout<<"\nEnter the length and breadth of rectangle:";
+    cin>>l>>b;
+    cout<<"\nArea of rectangle="<<area(l,b);
+
+    cout<<"\nEnter the length ,breadth and height of rectangle:";
+    cin>>l>>b>>h;
+    cout<<"\nvolume of cube="<<area(l,b,h);
+
+    cout<<"\nEnter the radius of the circle:";
+    cin>>r;
+    cout<<"\nArea of circle="<<area(r);
+
+    return 0;
+}
