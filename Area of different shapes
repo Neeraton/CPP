@@ -1,0 +1,48 @@
+#include<iostream>
+using namespace std;
+const float pi=3.14;
+int b,l,s;
+float r,base,height;
+int area(int s)
+{
+    return(s*s);
+}
+int area(int l,int b)
+{
+    return(l*b);
+}
+float area(float r)
+{
+    return(pi*r*r);
+}
+float area(float base,float height)
+{
+   return((base*height)/2);
+}
+
+
+int main()
+{
+        cout<<"Enter the length of a square:";
+        cin>>s;
+        cout<<"\nArea of square is ="<<area(s);
+
+        cout<<"\nEnter length and breadth of rectangle:";
+        cin>>l>>b;
+        cout<<"\nArea of rectangle is = "<<area(l,b);
+
+        cout<<"\nEnter radius of circle:";
+        cin>>r;
+        cout<<"\nArea of circle is ="<<area(r);
+
+        cout<<"\nEnter base and height of triangle:";
+        cin>>base>>height;
+        cout<<"\nArea of triangle is ="<<area(base,height);
+        cout<<"hence,\n\n ";
+
+        cout<<"\n\n\tArea of square is ="<<area(s);
+        cout<<"\n\n\tArea of triangle is ="<<area(base,height);
+        cout<<"\n\n\tArea of circle is ="<<area(r);
+        cout<<"\n\n\tArea of rectangle is = "<<area(l,b);
+
+}
