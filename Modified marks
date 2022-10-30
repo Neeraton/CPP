@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+class construct
+{
+
+    public:
+	float marks;
+	construct()
+	{
+		marks = 0;
+	}
+	construct(float a)
+	{
+		marks=a;
+	}
+
+	void disp()
+	{
+		cout<<"marks="<<marks<< endl;
+	}
+};
+
+int main()
+{
+	construct o;
+	construct o2( 88);
+
+	o.disp();
+	o2.disp();
+	return 0;
+}
