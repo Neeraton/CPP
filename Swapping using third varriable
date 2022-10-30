@@ -1,0 +1,22 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int a,b,c;
+    cout<<"Enter the first number:"<<endl;
+    cin>>a;
+    cout<<"Enter the second number:"<<endl;
+    cin>>b;
+    cout<<"number before the swapping:\n";
+    cout<<"\nfirst number is="<<a;
+    cout<<"\nsecond number is="<<b;
+
+    c=a;
+    a=b;
+    b=c;
+
+    cout<<"\n\nnumber after the swapping\n";
+    cout<<"\nfirst number is="<<a;
+    cout<<"\nsecond number is="<<b;
+
+}
