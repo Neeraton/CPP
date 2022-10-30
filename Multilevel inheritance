@@ -1,0 +1,52 @@
+#include<iostream>
+using namespace std;
+class A
+{
+    protected:
+    int a,b;
+public:
+     void input()
+     {
+    cout<<"enter the two numbers:";
+    cin>>a>>b;
+    }
+};
+class B:public A
+{
+    int c;
+public:
+    void add()
+    {
+        c=a+b;
+         cout<<"\nsum="<<c;
+    }
+    void sub()
+    {
+        c=a-b;
+         cout<<"\nsubtraction="<<c;
+    }
+};
+class C:public B
+{
+    int d;
+    public:
+        void product()
+        {
+            d=a*b;
+            cout<<"\nproduct="<<d;
+        }
+        void div()
+        {
+            d=a/b;
+             cout<<"\ndivision="<<d;
+        }
+};
+int main()
+{
+    C f;
+    f.input();
+    f.add();
+    f.sub();
+    f.product();
+    f.div();
+}
