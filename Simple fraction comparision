@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+class Fraction
+ {
+     public:
+	int num, den;
+};
+Fraction maxFraction(Fraction first, Fraction sec)
+{
+	int a = first.num;
+	int b = first.den;
+	int c = sec.num;
+	int d = sec.den;
+
+	int Y = a * d - b * c;
+
+	return (Y > 0) ? first : sec;
+}
+int main()
+{
+	Fraction first = { 3, 2 };
+	Fraction sec = { 3, 4 };
+	Fraction a;
+
+	Fraction f = maxFraction(first, sec);
+	cout << f.num << "/" << f.den;
+	return 0;
+}
+
